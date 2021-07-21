@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class payment extends Model
+{
+    use HasFactory;
+    public $timestamps=false;
+    public $table="payment";
+    public function getuser_nameAttribute($value)
+    {
+        return "Mr". $value;
+    }
+
+}

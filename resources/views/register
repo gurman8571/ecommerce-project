@@ -1,0 +1,10 @@
+    function login(request $req)
+    {
+      $user= customer::where(['email'=>$req->email])->first();
+if ($user||Hash::check($req->password,$customers->password)) {
+    return"username or password not matched";
+}
+else {
+    return view('home');
+}
+<p>{{$errors->first()}}</p>
